@@ -263,7 +263,7 @@
     "/aijishu/channel/:name": [
         "bigfei"
     ],
-    "/aijishu/user/:name": [
+    "/aijishu/u/:name": [
         "bigfei"
     ],
     "/airchina/announcement": [
@@ -3524,6 +3524,9 @@
     "/pianyuan/indexers/pianyuan/results/search/api": [
         "jerry1119"
     ],
+    "/picnob/user/:id": [
+        "TonyRL"
+    ],
     "/picuki/profile/:id/:functionalFlag?": [
         "hoilc",
         "Rongronggg9",
@@ -5087,8 +5090,14 @@
         "xyqfer",
         "Fatpandac"
     ],
+    "/youtube/c/:id/:embed?": [
+        "TonyRL"
+    ],
     "/youtube/channel/:id/:embed?": [
         "DIYgod"
+    ],
+    "/youtube/charts/:category?/:country?/:embed?": [
+        "TonyRL"
     ],
     "/youtube/playlist/:id/:embed?": [
         "HenryQW"
