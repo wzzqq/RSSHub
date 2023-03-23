@@ -888,6 +888,9 @@
     "/chaping/newsflash": [
         "Fatpandac"
     ],
+    "/chiculture/topic/:category?": [
+        "nczitzk"
+    ],
     "/china/news/military": [
         "jiaaoMario"
     ],
@@ -3217,6 +3220,12 @@
         "nczitzk"
     ],
     "/newsmarket/:category?": [
+        "nczitzk"
+    ],
+    "/newzmz/:category?": [
+        "nczitzk"
+    ],
+    "/newzmz/view/:id?": [
         "nczitzk"
     ],
     "/nextapple/realtime/:category?": [
@@ -6629,10 +6638,7 @@
     "/feed-the-beast/modpack/:modpackEntry": [],
     "/gab/user/:username": [],
     "/gab/popular/:sort?": [],
-    "/newzmz/view/:id": [],
-    "/newzmz/:category?": [],
     "/phrack": [],
-    "/chiculture/topic/:category?": [],
     "/cqut/news": [],
     "/cqut/libnews": [],
     "/growincity/news/:id?": [],
