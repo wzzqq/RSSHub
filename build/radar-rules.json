@@ -3920,6 +3920,14 @@
           "/:user/:repo/wiki"
         ],
         "target": "/github/wiki/:user/:repo/:page"
+      },
+      {
+        "title": "Notifications 通知",
+        "docs": "https://docs.rsshub.app/programming.html#github",
+        "source": [
+          "/notifications"
+        ],
+        "target": "/github/notifications"
       }
     ]
   },
@@ -6971,6 +6979,20 @@
       }
     ]
   },
+  "geocaching.com": {
+    "_name": "Geocaching",
+    ".": [
+      {
+        "title": "博客更新",
+        "docs": "https://docs.rsshub.app/blog.html#geocaching",
+        "source": [
+          "/blog/",
+          "/"
+        ],
+        "target": "/geocaching/blogs"
+      }
+    ]
+  },
   "getdr.com": {
     "_name": "趨勢科技防詐達人",
     ".": [
@@ -9834,6 +9856,13 @@
         "docs": "https://docs.rsshub.app/reading.html#inoreader",
         "source": [
           "/stream/user/:user/tag/:tag/*"
+        ]
+      },
+      {
+        "title": "RSS",
+        "docs": "https://docs.rsshub.app/reading.html#inoreader",
+        "source": [
+          "/stream/user/:user/tag/:tag"
         ]
       }
     ]
@@ -18567,6 +18596,17 @@
       }
     ]
   },
+  "techcrunch.com": {
+    "_name": "TechCrunch",
+    ".": [
+      {
+        "title": "新闻",
+        "docs": "https://docs.rsshub.app/new-media.html#techcrunch",
+        "source": "/",
+        "target": "/techcrunch/news"
+      }
+    ]
+  },
   "techflowpost.com": {
     "_name": "深潮TechFlow",
     ".": [
@@ -19899,6 +19939,14 @@
         "docs": "https://docs.rsshub.app/university.html#bei-jing-ke-ji-da-xue",
         "source": "/:type",
         "target": "/ustb/yjsy/news/:type"
+      }
+    ],
+    "yzxc": [
+      {
+        "title": "研究生招生信息网",
+        "docs": "https://docs.rsshub.app/university.html#bei-jing-ke-ji-da-xue-yan-jiu-sheng-zhao-sheng-xin-xi-wang",
+        "source": "/",
+        "target": "/ustb/yzxc/tzgg"
       }
     ]
   },
