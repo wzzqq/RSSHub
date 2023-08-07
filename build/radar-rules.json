@@ -1915,6 +1915,19 @@
       }
     ]
   },
+  "altervista.org": {
+    "_name": "Altervista",
+    "hyp3rlinx": [
+      {
+        "title": "hyp3rlinx blog",
+        "docs": "https://docs.rsshub.app/",
+        "source": [
+          "/"
+        ],
+        "target": "/rsshub/transform/html/http%3A%2F%2Fhyp3rlinx.altervista.org%2F/item=table[border=%221%22]%20tr%20td%20a"
+      }
+    ]
+  },
   "amazon.com": {
     "_name": "Amazon",
     ".": [
@@ -6907,6 +6920,28 @@
       }
     ]
   },
+  "eet-china.com": {
+    "_name": "电子工程专辑",
+    ".": [
+      {
+        "title": "芯语",
+        "docs": "https://docs.rsshub.app/new-media.html#dian-zi-gong-cheng-zhuan-ji-xin-yu",
+        "source": [
+          "/mp",
+          "/"
+        ]
+      },
+      {
+        "title": "芯语 - 标签",
+        "docs": "https://docs.rsshub.app/new-media.html#dian-zi-gong-cheng-zhuan-ji-xin-yu-biao-qian",
+        "source": [
+          "/mp/tags/:id",
+          "/"
+        ],
+        "target": "/eet-china/mp/tags/:id"
+      }
+    ]
+  },
   "elasticsearch.cn": {
     "_name": "Elastic 中文社区",
     ".": [
@@ -10886,6 +10921,57 @@
           "/Category/:guid/ArticlesByCategory.do"
         ],
         "target": "/hunanpea/rsks/:guid"
+      }
+    ]
+  },
+  "hunau.edu.cn": {
+    "_name": "湖南农业大学",
+    "gfxy": [
+      {
+        "title": "公共管理与法学学院",
+        "docs": "https://docs.rsshub.app/university.html#hu-nan-nong-ye-da-xue",
+        "source": [
+          "/",
+          "tzgg",
+          "/:category"
+        ],
+        "target": "/:category"
+      }
+    ],
+    "ied": [
+      {
+        "title": "国际交流与合作处",
+        "docs": "https://docs.rsshub.app/university.html#hu-nan-nong-ye-da-xue",
+        "source": [
+          "/",
+          "/xwzx/ggtz",
+          "/:type/:category"
+        ],
+        "target": "/:type/:category"
+      }
+    ],
+    "jwc": [
+      {
+        "title": "教务处",
+        "docs": "https://docs.rsshub.app/university.html#hu-nan-nong-ye-da-xue",
+        "source": [
+          "/",
+          "tzgg",
+          "/:category"
+        ],
+        "target": "/:category"
+      }
+    ],
+    "xky": [
+      {
+        "title": "信息与智能科学技术学院",
+        "docs": "https://docs.rsshub.app/university.html#hu-nan-nong-ye-da-xue",
+        "source": [
+          "/",
+          "tzgg_8472",
+          "/:category"
+        ],
+        "target": "/:category"
       }
     ]
   },
@@ -17104,6 +17190,14 @@
         "target": "/odaily/newsflash"
       },
       {
+        "title": "搜索快讯",
+        "docs": "https://docs.rsshub.app/new-media.html#odaily-xing-qiu-ri-bao-sou-suo-kuai-xun",
+        "source": [
+          "/search/:keyword"
+        ],
+        "target": "/odaily/search/news/:keyword"
+      },
+      {
         "title": "文章",
         "docs": "https://docs.rsshub.app/new-media.html#odaily-xing-qiu-ri-bao-wen-zhang",
         "source": [
@@ -17142,6 +17236,14 @@
           "/"
         ],
         "target": "/odaily/newsflash"
+      },
+      {
+        "title": "搜索快讯",
+        "docs": "https://docs.rsshub.app/new-media.html#odaily-xing-qiu-ri-bao-sou-suo-kuai-xun",
+        "source": [
+          "/search/:keyword"
+        ],
+        "target": "/odaily/search/news/:keyword"
       },
       {
         "title": "文章",
@@ -19506,6 +19608,20 @@
           "/NewsList.aspx",
           "/"
         ]
+      }
+    ]
+  },
+  "sec.today": {
+    "_name": "每日安全",
+    ".": [
+      {
+        "title": "动态",
+        "docs": "https://docs.rsshub.app/",
+        "source": [
+          "/pulses",
+          "/"
+        ],
+        "target": "/rsshub/transform/html/https%3A%2F%2Fsec.today%2Fpulses%2F/item=div[class=\"card-body\"]"
       }
     ]
   },
@@ -24801,6 +24917,7 @@
         "title": "组合最新调仓信息",
         "docs": "https://docs.rsshub.app/finance.html#xue-qiu",
         "source": [
+          "/P/:id",
           "/p/:id"
         ],
         "target": "/xueqiu/snb/:id"
@@ -24809,7 +24926,8 @@
         "title": "股票信息",
         "docs": "https://docs.rsshub.app/finance.html#xue-qiu",
         "source": [
-          "/S/:id"
+          "/S/:id",
+          "/s/:id"
         ],
         "target": "/xueqiu/stock_info/:id"
       },
