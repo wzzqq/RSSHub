@@ -2989,6 +2989,22 @@
         docs:"https://docs.rsshub.app/routes/traditional-media#tian-xia-za-zhi",
         source:[ "/author/:channel" ],
         target:"/cw/author/:channel" } ] },
+  "cyzone.cn":{ _name:"创业邦",
+    ".":[ { title:"资讯",
+        docs:"https://docs.rsshub.app/routes/new-media#chuang-ye-bang-zi-xun",
+        source:[ "/channel/:id",
+          "/" ],
+        target:"/cyzone/:id" },
+      { title:"作者",
+        docs:"https://docs.rsshub.app/routes/new-media#chuang-ye-bang-zuo-zhe",
+        source:[ "/author/:id",
+          "/" ],
+        target:"/cyzone/author/:id" },
+      { title:"标签",
+        docs:"https://docs.rsshub.app/routes/new-media#chuang-ye-bang-biao-qian",
+        source:[ "/label/:name",
+          "/" ],
+        target:"/cyzone/label/:name" } ] },
   "cztv.com":{ _name:"新蓝网",
     ".":[ { title:"浙江新闻联播",
         docs:"https://docs.rsshub.app/routes/traditional-media#xin-lan-wang-zhe-jiang-guang-bo-dian-shi-ji-tuan",
@@ -5098,6 +5114,10 @@
         docs:"https://docs.rsshub.app/routes/government#guang-dong-sheng-ren-min-zheng-fu-guang-dong-sheng-shen-zhen-shi-ren-min-zheng-fu",
         source:[ "/cn/xxgk/zfxxgj/:caty" ],
         target:"/gov/shenzhen/hrss/szksy/:caty/:page?" } ],
+    zjj:[ { title:"深圳市住房和建设局",
+        docs:"https://docs.rsshub.app/routes/government#guang-dong-sheng-ren-min-zheng-fu-shen-zhen-shi-zhu-fang-he-jian-she-ju",
+        source:[ "/xxgk/:caty" ],
+        target:"/gov/shenzhen/zjj/xxgk/:caty" } ],
     zzb:[ { title:"组工在线公告",
         docs:"https://docs.rsshub.app/routes/government#guang-dong-sheng-ren-min-zheng-fu-shen-zhen-shi-kao-shi-yuan",
         source:[ "/*" ],
@@ -12985,6 +13005,29 @@
         docs:"https://docs.rsshub.app/routes/blog#v1tx",
         source:[ "/" ],
         target:"/v1tx" } ] },
+  "v2ex.com":{ _name:"V2EX",
+    ".":[ { title:"最热 / 最新主题",
+        docs:"https://docs.rsshub.app/routes/v2ex",
+        source:[ "/" ],
+        target:(_, url) => {
+                    const { searchParams } = new URL(url);
+                    if (searchParams.get('tab') === 'all' || searchParams.get('tab') === 'hot') {
+                        return `/v2ex/topics/${searchParams.get('tab')?.replace('all', 'latest')}`;
+                    }
+                } },
+      { title:"帖子",
+        docs:"https://docs.rsshub.app/routes/v2ex",
+        source:[ "/t/:postid" ],
+        target:"/v2ex/post/:postid" },
+      { title:"标签",
+        docs:"https://docs.rsshub.app/routes/v2ex",
+        source:[ "/" ],
+        target:(_, url) => {
+                    const { searchParams } = new URL(url);
+                    if (searchParams.get('tab') && searchParams.get('tab') !== 'all' && searchParams.get('tab') !== 'hot') {
+                        return `/v2ex/tab/${searchParams.get('tab')}`;
+                    }
+                } } ] },
   "v2rayshare.com":{ _name:"V2rayShare",
     ".":[ { title:"免费节点",
         docs:"https://docs.rsshub.app/routes/other#v2rayshare",

@@ -1383,6 +1383,21 @@
     "/cw/today": [
         "TonyRL"
     ],
+    "/cyzone": [
+        "nczitzk"
+    ],
+    "/cyzone/:id?": [
+        "nczitzk"
+    ],
+    "/cyzone/author/:id": [
+        "nczitzk"
+    ],
+    "/cyzone/channel/:id?": [
+        "nczitzk"
+    ],
+    "/cyzone/label/:name": [
+        "nczitzk"
+    ],
     "/cztv/zjxwlb": [
         "yhkang"
     ],
@@ -2462,6 +2477,9 @@
     ],
     "/gov/shenzhen/xxgk/zfxxgj/:caty": [
         "laoxua"
+    ],
+    "/gov/shenzhen/zjj/xxgk/:caty": [
+        "lonn"
     ],
     "/gov/shenzhen/zzb/:caty/:page?": [
         "zlasd"
@@ -5842,6 +5860,15 @@
     "/v1tx/": [
         "TonyRL"
     ],
+    "/v2ex/post/:postid": [
+        "kt286"
+    ],
+    "/v2ex/tab/:tabid": [
+        "liyefox"
+    ],
+    "/v2ex/topics/:type": [
+        "WhiteWorld"
+    ],
     "/v2rayshare/": [
         "77taibai"
     ],
@@ -6605,9 +6632,6 @@
     "/dribbble/keyword/:keyword": [],
     "/huya/live/:id": [],
     "/showroom/room/:id": [],
-    "/v2ex/topics/:type": [],
-    "/v2ex/post/:postid": [],
-    "/v2ex/tab/:tabid": [],
     "/fdroid/apprelease/:app": [],
     "/konachan/post/popular_recent": [],
     "/konachan.com/post/popular_recent": [],
@@ -6852,8 +6876,6 @@
     "/patchwork.kernel.org/comments/:id": [],
     "/jingdong/zhongchou/:type/:status/:sort": [],
     "/allpoetry/:order?": [],
-    "/cyzone/author/:id": [],
-    "/cyzone/label/:name": [],
     "/gov/province/:name/:category": [],
     "/gov/city/:name/:category": [],
     "/gov/statecouncil/briefing": [],
