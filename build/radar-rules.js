@@ -6324,6 +6324,17 @@
         source:[ "/:category",
           "/" ],
         target:"/jandan/:category?" } ] },
+  "japanpost.jp":{ _name:"日本郵便",
+    "trackings.post":[ { title:"郵便・荷物の追跡",
+        docs:"https://docs.rsshub.app/routes/other#japanpost-ri-ben-you-bian",
+        source:"/services/srv/search/direct",
+        target:(params, url) => {
+                    const reqCode = new URL(url).searchParams.get('reqCodeNo1').toUpperCase();
+                    const locale = new URL(url).searchParams.get('locale').toLowerCase();
+                    if ((reqCode.search(/^(?:\d{11,12}|[A-Z]{2}\d{9}[A-Z]{2})$/) === 0 && locale === 'ja') || locale === 'en') {
+                        return `/japanpost/track/${reqCode}/${locale}`;
+                    }
+                } } ] },
   "javbus.com":{ _name:"JavBus",
     www:[ { title:"有码 - 首页",
         docs:"https://docs.rsshub.app/routes/multimedia#javbus",
@@ -7401,8 +7412,7 @@
   "kunchengblog.com":{ _name:"Kun Cheng",
     ".":[ { title:"Essay",
         docs:"https://docs.rsshub.app/routes/blog#kun-cheng-essay",
-        source:[ "/essay",
-          "/" ],
+        source:[ "/essay" ],
         target:"/kunchengblog/essay" } ] },
   "kuwaitlocal.com":{ _name:"Kuwait Local",
     ".":[ { title:"Latest News",
@@ -7640,25 +7650,45 @@
           "/" ],
         target:"/literotica/category/:category" } ] },
   "liulinblog.com":{ _name:"木木博客",
-    ".":[ { title:"每天六十秒（60秒）读懂世界",
-        docs:"https://docs.rsshub.app/routes/new-media#mu-mu-bo-ke",
-        source:[ "/kuaixun" ],
-        target:"/liulinblog/kuaixun" },
-      { title:"互联网早报",
-        docs:"https://docs.rsshub.app/routes/new-media#mu-mu-bo-ke",
-        source:[ "/itnews/:channel" ],
-        target:(params) => {
-                    if (params.channel === 'internet') {
-                        return '/liulinblog/itnews/:channel';
-                    }
+    ".":[ { title:"频道",
+        docs:"https://docs.rsshub.app/new-media.html#mu-mu-bo-ke",
+        source:[ "/:channel",
+          "/" ],
+        target:(params, url) => {
+                    url = new URL(url);
+                    const path = url.href.match(/\.com(.*?)/)[1];
+
+                    return `/liulinblog${path === '/' ? '' : path}`;
                 } },
-      { title:"站长圈",
-        docs:"https://docs.rsshub.app/routes/new-media#mu-mu-bo-ke",
-        source:[ "/itnews/:channel" ],
-        target:(params) => {
-                    if (params.channel === 'seo') {
-                        return '/liulinblog/itnews/:channel';
-                    }
+      { title:"标签",
+        docs:"https://docs.rsshub.app/new-media.html#mu-mu-bo-ke",
+        source:[ "/tag/:id",
+          "/" ],
+        target:"/liulinblog/tag/:id" },
+      { title:"专题",
+        docs:"https://docs.rsshub.app/new-media.html#mu-mu-bo-ke",
+        source:[ "/series/:id",
+          "/" ],
+        target:"/liulinblog/series/:id" },
+      { title:"搜索",
+        docs:"https://docs.rsshub.app/new-media.html#mu-mu-bo-ke",
+        source:[ "/search/:keyword",
+          "/" ],
+        target:"/liulinblog/search/:keyword" },
+      { title:"60秒读懂世界",
+        docs:"https://docs.rsshub.app/new-media.html#mu-mu-bo-ke",
+        source:[ "/kuaixun",
+          "/" ],
+        target:"/liulinblog/kuaixun" },
+      { title:"网络营销",
+        docs:"https://docs.rsshub.app/new-media.html#mu-mu-bo-ke",
+        source:[ "/:channel",
+          "/" ],
+        target:(params, url) => {
+                    url = new URL(url);
+                    const path = url.href.match(/\.com(.*?)/)[1];
+
+                    return `/liulinblog${path === '/' ? '' : path}`;
                 } } ] },
   "lkong.com":{ _name:"龙空",
     ".":[ { title:"分区",
@@ -8061,8 +8091,12 @@
         source:"/:location/news",
         target:"/mihoyo/sr/:location" } ] },
   "mihoyo.com":{ _name:"米哈游",
-    bbs:[ { title:"米游社 - 官方公告",
-        docs:"https://docs.rsshub.app/routes/game#mi-ha-you-mi-you-she-guan-fang-gong-gao",
+    bbs:[ { title:"米游社 - 同人榜",
+        docs:"https://docs.rsshub.app/routes/game#mi-ha-you",
+        source:"/:game/imgRanking/:forum_id/:ranking_id/:cate_id",
+        target:"/mihoyo/bbs/img-ranking/:game" },
+      { title:"米游社 - 官方公告",
+        docs:"https://docs.rsshub.app/routes/game#mi-ha-you",
         source:[ "/:game/home/28",
           "/:game/home/6",
           "/:game/home/31",
@@ -9955,6 +9989,35 @@
         source:[ "/",
           "/articles/:name" ],
         target:"/polkaworld/newest" } ] },
+  "pornhub.com":{ _name:"PornHub",
+    ".":[ { title:"Category",
+        docs:"https://docs.rsshub.app/routes/multimedia#pornhub",
+        source:[ "/categories/:caty",
+          "/video" ],
+        target:(params, url) => {
+                    if (params.caty) {
+                        return `/pornhub/category/${params.caty}`;
+                    }
+                    return `/pornhub/category/${new URL(url).searchParams.get('c')}`;
+                } },
+      { title:"Keyword Search",
+        docs:"https://docs.rsshub.app/routes/multimedia#pornhub",
+        source:[ "/video/search" ],
+        target:(_, url) => `/pornhub/category/${new URL(url).searchParams.get('search')}` },
+      { title:"Users",
+        docs:"https://docs.rsshub.app/routes/multimedia#pornhub",
+        source:[ "/users/:username/*" ],
+        target:"/pornhub/users/:username" },
+      { title:"Verified amateur / Model",
+        docs:"https://docs.rsshub.app/routes/multimedia#pornhub",
+        source:[ "/model/:username/*" ],
+        target:"/pornhub/model/:username" },
+      { title:"Verified model / Pornstar",
+        docs:"https://docs.rsshub.app/routes/multimedia#pornhub",
+        source:[ "/pornstar/:username/*" ],
+        target:"/pornhub/pornstar/:username" },
+      { title:"Video List",
+        docs:"https://docs.rsshub.app/routes/multimedia#pornhub" } ] },
   "postman.com":{ _name:"Postman",
     ".":[ { title:"Release Notes",
         docs:"https://docs.rsshub.app/routes/program-update#postman-release-notes",
@@ -14663,17 +14726,6 @@
         docs:"https://docs.rsshub.app/routes/university#ha-er-bin-gong-cheng-da-xue",
         source:"/*",
         target:"/heu/gongxue/sx" } ] },
-  "japanpost.jp":{ _name:"日本郵便",
-    "trackings.post":[ { title:"郵便・荷物の追跡",
-        docs:"https://docs.rsshub.app/routes/other#ri-ben-you-bian-you-bian-zhui-ji-サービス",
-        source:"/services/srv/search/direct",
-        target:(params, url) => {
-                    const reqCode = new URL(url).searchParams.get('reqCodeNo1').toUpperCase();
-                    const locale = new URL(url).searchParams.get('locale').toLowerCase();
-                    if ((reqCode.search(/^(?:\d{11,12}|[A-Z]{2}\d{9}[A-Z]{2})$/) === 0 && locale === 'ja') || locale === 'en') {
-                        return `/japanpost/track/${reqCode}/${locale}`;
-                    }
-                } } ] },
   "matters.news":{ _name:"Matters",
     ".":[ { title:"最新排序",
         docs:"https://docs.rsshub.app/routes/new-media#matters",
