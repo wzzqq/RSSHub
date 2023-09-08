@@ -3649,6 +3649,9 @@
     "/luogu/user/blog/:username": [
         "ftiasch"
     ],
+    "/luxiangdong/archive": [
+        "Levix"
+    ],
     "/lvv2/news/:channel/:sort?": [
         "Fatpandac"
     ],
@@ -5529,6 +5532,30 @@
     "/test/:id": [
         "DIYgod",
         "NeverBehave"
+    ],
+    "/tfc-taiwan": [
+        "TonyRL"
+    ],
+    "/tfc-taiwan/": [
+        "TonyRL"
+    ],
+    "/tfc-taiwan/:type?": [
+        "TonyRL"
+    ],
+    "/tfc-taiwan/:type/:id+": [
+        "TonyRL"
+    ],
+    "/tfc-taiwan/category/:id+": [
+        "TonyRL"
+    ],
+    "/tfc-taiwan/info": [
+        "TonyRL"
+    ],
+    "/tfc-taiwan/report": [
+        "TonyRL"
+    ],
+    "/tfc-taiwan/topic/:id": [
+        "TonyRL"
     ],
     "/theatlantic/:category": [
         "NavePnow"
