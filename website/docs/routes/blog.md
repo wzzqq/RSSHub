@@ -264,6 +264,30 @@ Limit the number of entries to be retrieved by adding `?limit=x` to the end of t
 
 <Route author="chazeon" example="/stratechery" path="/stratechery" />
 
+## Surfshark {#surfshark}
+
+### Blog {#surfshark-blog}
+
+<Route author="nczitzk" example="/surfshark/blog" path="/surfshark/blog/:category?" paramsDesc={['Category, can be found in URL ,see below, All by default']} radar="1" rssbud="1">
+
+| Home | Cybersecurity | All things VPN | Internet censorship | Entertainment | News |
+| ---- | ------------- | -------------- | ------------------- | ------------- | ---- |
+|      | cybersecurity | all-things-vpn | internet-censorship | entertainment | news |
+
+#### Cybersecurity {#surfshark-blog-cybersecurity}
+
+| Internet Security               | Mobile Security               | Identity Protection               | Phishing               |
+| ------------------------------- | ----------------------------- | --------------------------------- | ---------------------- |
+| cybersecurity/internet-security | cybersecurity/mobile-security | cybersecurity/identity-protection | cybersecurity/phishing |
+
+#### All things VPN {#surfshark-blog-all-things-vpn}
+
+| Must-knows     | Technology     | Tips & Advice       |
+| -------------- | -------------- | ------------------- |
+| vpn/must-knows | vpn/technology | vpn/tips-and-advice |
+
+</Route>
+
 ## Uber 优步 {#uber-you-bu}
 
 ### Engineering {#uber-you-bu-engineering}
@@ -535,6 +559,6 @@ Limit the number of entries to be retrieved by adding `?limit=x` to the end of t
 
 </Route>
 
-### TOP 20 {#zhu-bai-top-20}
+### 上周热门 TOP 20 {#zhu-bai-shang-zhou-re-men-top-20}
 
-<Route author="nczitzk" example="/zhubai/top20" path="/zhubai/top20"/>
+<Route author="nczitzk" example="/zhubai/top20" path="/zhubai/top20" radar="1" rssbud="1"/>

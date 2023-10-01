@@ -59,7 +59,15 @@ The parameters can be extracted from the Release page URL: `https://install.appc
 
 ### App Update {#app-store-mac-app-store-app-update}
 
-<Route author="EkkoG" example="/apple/apps/update/us/id1529445840" path="/apple/apps/update/:country/:id" paramsDesc={['App Store Country, obtain from the app URL `https://apps.apple.com/us/app/apple-store/id375380948`, in this case, `us`', 'App Store app id, obtain from the app URL `https://apps.apple.com/us/app/apple-store/id375380948`, in this case, `id375380948`']} radar="1"/>
+<Route author="EkkoG nczitzk" example="/apple/apps/update/us/id408709785" path="/apple/apps/update/:country/:id" paramsDesc={['App Store Country, obtain from the app URL, see below', 'App id, obtain from the app URL']} radar="1" rssbud="1">
+
+:::tip
+
+For example, the URL of [GarageBand](https://apps.apple.com/us/app/messages/id408709785) in the App Store is <https://apps.apple.com/us/app/messages/id408709785>. In this case, the `App Store Country` parameter for the route is `us`, and the `App id` parameter is `id1146560473`. So the route should be [`/apple/apps/update/us/id408709785`](https://rsshub.app/apple/apps/update/us/id408709785).
+
+:::
+
+</Route>
 
 ### Price Drop {#app-store-mac-app-store-price-drop}
 
@@ -635,6 +643,16 @@ Logseq 开发团队已经放弃了 [旧网站](https://logseq.com/blog)。
 Open `https://www.sony.com/electronics/support` and search for the corresponding product, such as `Sony A7M4`, the website corresponding to which is `https://www.sony.com/electronics/support/e-mount-body-ilce-7-series/ilce-7m4/downloads`, where `productType` is `e-mount-body-ilce-7-series` and `productId` is `ilce-7m4`.
 
 :::
+
+</Route>
+
+## SourceForge {#sourceforge}
+
+<Route author="JimenezLi" example="/sourceforge/topic=artificial-intelligence&os=windows" path="/sourceforge/:routeParams?" paramsDesc={['route params, see below']}>
+
+For some URL like [https://sourceforge.net/directory/artificial-intelligence/windows/](https://sourceforge.net/directory/artificial-intelligence/windows/), it is equal to [https://sourceforge.net/directory/?topic=artificial-intelligence&os=windows"](https://sourceforge.net/directory/?topic=artificial-intelligence&os=windows), thus subscribing to `/sourceforge/topic=artificial-intelligence&os=windows`.
+
+URL params can duplicate, such as `/sourceforge/topic=artificial-intelligence&os=windows&os=linux`.
 
 </Route>
 

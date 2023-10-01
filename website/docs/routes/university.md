@@ -587,9 +587,9 @@ Note：[Source website](https://ece.umass.edu/seminar) may be empty when there's
 
 </Route>
 
-## 成都信息工程大学 {#cheng-dou-xin-xi-gong-cheng-da-xue}
+## 成都信息工程大学 {#cheng-du-xin-xi-gong-cheng-da-xue}
 
-### 成信新闻网 {#cheng-dou-xin-xi-gong-cheng-da-xue-cheng-xin-xin-wen-wang}
+### 成信新闻网 {#cheng-du-xin-xi-gong-cheng-da-xue-cheng-xin-xin-wen-wang}
 
 <Route author="kimika" example="/cuit/cxxww/1" path="/cuit/cxxww/:type?" paramsDesc={['默认为 `1`']}>
 
@@ -1314,6 +1314,10 @@ Note：[Source website](https://ece.umass.edu/seminar) may be empty when there's
 ### 人工智能学院通知公告 {#guang-xi-min-zu-da-xue-ren-gong-zhi-neng-xue-yuan-tong-zhi-gong-gao}
 
 <Route author="real-jiakai" example="/gxmzu/aitzgg" path="/gxmzu/aitzgg" radar="1" />
+
+### 图书馆最新消息 {#guang-xi-min-zu-da-xue-tu-shu-guan-zui-xin-xiao-xi}
+
+<Route author="real-jiakai" example="/gxmzu/libzxxx" path="/gxmzu/libzxxx" radar="1" />
 
 ## 广州大学 {#guang-zhou-da-xue}
 

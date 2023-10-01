@@ -27,17 +27,17 @@ dependencies:
     specifier: ^2.0.0
     version: 2.0.0
   markdown-it:
-    specifier: ^13.0.1
-    version: 13.0.1
+    specifier: ^13.0.2
+    version: 13.0.2
   meilisearch-docsearch:
     specifier: ^0.4.7
     version: 0.4.7
   pinyin-pro:
-    specifier: 3.16.6
-    version: 3.16.6
+    specifier: 3.16.7
+    version: 3.16.7
   prism-react-renderer:
-    specifier: ^2.0.6
-    version: 2.0.6(react@17.0.2)
+    specifier: ^2.1.0
+    version: 2.1.0(react@17.0.2)
   react:
     specifier: ^17.0.2
     version: 17.0.2
@@ -56,8 +56,8 @@ devDependencies:
     specifier: ^2.0.1
     version: 2.0.1
   '@types/markdown-it':
-    specifier: ^13.0.1
-    version: 13.0.1
+    specifier: ^13.0.2
+    version: 13.0.2
   '@types/mdx-js__react':
     specifier: ^1.5.5
     version: 1.5.5
@@ -3281,8 +3281,8 @@ packages:
     resolution: {integrity: sha512-HZQYqbiFVWufzCwexrvh694SOim8z2d+xJl5UNamcvQFejLY/2YUtzXHYi3cHdI7PMlS8ejH2slRAOJQ32aNbA==}
     dev: true
 
-  /@types/markdown-it@13.0.1:
-    resolution: {integrity: sha512-SUEb8Frsxs3D5Gg9xek6i6EG6XQ5s+O+ZdQzIPESZVZw3Pv3CPQfjCJBI+RgqZd1IBeu18S0Rn600qpPnEK37w==}
+  /@types/markdown-it@13.0.2:
+    resolution: {integrity: sha512-Tla7hH9oeXHOlJyBFdoqV61xWE9FZf/y2g+gFVwQ2vE1/eBzjUno5JCd3Hdb5oATve5OF6xNjZ/4VIZhVVx+hA==}
     dependencies:
       '@types/linkify-it': 3.0.2
       '@types/mdurl': 1.0.2
@@ -6709,8 +6709,8 @@ packages:
     resolution: {integrity: sha512-8z4efJYk43E0upd0NbVXwgSTQs6cT3T06etieCMEg7dRbzCbxUCK/GHlX8mhHRDcp+OLlHkPKsvqQTCvsRl2cg==}
     dev: false
 
-  /markdown-it@13.0.1:
-    resolution: {integrity: sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q==}
+  /markdown-it@13.0.2:
+    resolution: {integrity: sha512-FtwnEuuK+2yVU7goGn/MJ0WBZMM9ZPgU9spqlFs7/A/pDIUNSOQZhUgOqYCficIuR2QaFnrt8LHqBWsbTAoI5w==}
     hasBin: true
     dependencies:
       argparse: 2.0.1
@@ -7248,8 +7248,8 @@ packages:
     engines: {node: '>=8.6'}
     dev: false
 
-  /pinyin-pro@3.16.6:
-    resolution: {integrity: sha512-l4W4c/K49kj33P5JwpAHkkN/rlxeOwQ07bLhMg8kJVIsdxD3Cpa3aIBF1PKUPt3rxbebawmBoeR1x8VgZmFO5w==}
+  /pinyin-pro@3.16.7:
+    resolution: {integrity: sha512-E5LoVzx66aZEria1D99e0eYQJAxgHHysLvbPpMf58bcCuFFVAgbeYI4vysMrZbgEf3IOJ6RXgm4YD7ZGHqbWGQ==}
     dev: false
 
   /pkg-dir@4.2.0:
@@ -8063,8 +8063,8 @@ packages:
       react: 17.0.2
     dev: false
 
-  /prism-react-renderer@2.0.6(react@17.0.2):
-    resolution: {integrity: sha512-ERzmAI5UvrcTw5ivfEG20/dYClAsC84eSED5p9X3oKpm0xPV4A5clFK1mp7lPIdKmbLnQYsPTGiOI7WS6gWigw==}
+  /prism-react-renderer@2.1.0(react@17.0.2):
+    resolution: {integrity: sha512-I5cvXHjA1PVGbGm1MsWCpvBCRrYyxEri0MC7/JbfIfYfcXAxHyO5PaUjs3A8H5GW6kJcLhTHxxMaOZZpRZD2iQ==}
     peerDependencies:
       react: '>=16.0.0'
     dependencies:
